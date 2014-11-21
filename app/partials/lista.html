@@ -1,0 +1,15 @@
+<div class="input-group" id="filtro">
+<h2>Registro de Chistes</h2>	<br>
+<p>Buscar: </p>	<input type="text" class="form-control" placeholder="Ingrese el nombre del chiste" ng-model="filtro">
+</div><br>
+<table width="280" cellspacing="1" cellpadding="3" border="5" bgcolor="#1E679A"> 
+<tr> 
+   <td><font color="purple" face="arial, verdana, helvetica"> 
+<center><li ng-repeat="incidencia in incidencias | filter: filtro"
+		class="item-lista list-group-item">
+		<div><a ng-href="#/ver/{{incidencia._id}}">{{incidencia.titulo}}</a></center>
+   </font> 
+   </td> 
+</tr> 
+</table>
+
